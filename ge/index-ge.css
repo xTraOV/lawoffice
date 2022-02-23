@@ -43,6 +43,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  font-family: "BPG Banner ExtraSquare Caps", sans-serif;
   gap: 50px;
 }
 
