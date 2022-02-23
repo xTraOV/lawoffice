@@ -1,5 +1,5 @@
 header {
-  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-family: "Noto Serif Display", serif;
   font-weight: 700;
 }
 
@@ -15,12 +15,12 @@ body {
 }
 
 .content {
-  width: 70%;
+  width: 80%;
   margin-top: 80px;
   display: -ms-grid;
   display: grid;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
   -ms-grid-columns: 0.6fr 1.4fr;
       grid-template-columns: 0.6fr 1.4fr;
 }
@@ -33,17 +33,26 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 50px;
 }
 
-.content .main-article h1,
+.content .main-article h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 .content .main-article p {
-  max-width: 600px;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -81,4 +90,4 @@ body {
     font-size: 1rem;
   }
 }
-/*# sourceMappingURL=index.style.css.map */
+/*# sourceMappingURL=index-en.css.map */
