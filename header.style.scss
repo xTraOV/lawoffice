@@ -1,9 +1,33 @@
+$default-color: red;
+$secondary-color: blue;
+
+$header-height-web: 96px;
+$header-height-mobile: 64px;
+
+$font-size-article-name-web: 2.5rem;
+$font-size-article-content-web: 1.2rem;
+
+$font-size-article-name-mobile: 2rem;
+$font-size-article-content-mobile: 1rem;
+
+$geo-font: "BPG Banner ExtraSquare Caps", sans-serif;
+$main-font: "BPG Nino Mtavruli", sans-serif;
+
+$background-color-main: #131516;
+$text-color-main: #d8d4cf;
+
 body {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: $background-color-main;
+    a,
+    h1,
+    p {
+        color: $text-color-main;
+    }
     a {
         list-style: none;
         text-decoration: none;
@@ -16,12 +40,12 @@ body {
 
 header {
     width: 100%;
-    height: 80px;
+    height: $header-height-web;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    font-family: "BPG Nino Mtavruli", sans-serif;
+    font-family: $main-font;
     font-weight: 700;
     .header {
         width: 70%;
@@ -37,6 +61,11 @@ header {
                 flex-direction: row;
                 list-style: none;
                 gap: 40px;
+                a,
+                h1,
+                p {
+                    color: $text-color-main;
+                }
             }
             .hamburger-menu,
             .hamburger-menu-exit {
@@ -51,10 +80,13 @@ header {
 }
 
 @media screen and (max-width: 640px) {
+    .menu-open {
+        overflow: hidden;
+    }
     header {
-        height: 48px;
+        height: $header-height-mobile;
         .header {
-            width: 95%;
+            width: 90%;
             .logo-wrapper {
                 a {
                     img {
@@ -63,29 +95,41 @@ header {
                 }
             }
             .navigation-wrapper {
+                width: 24px;
                 .navigation-list {
                     display: none;
                 }
                 .navigation-list.mobile-open {
+                    transition: all 300ms linear;
+                    height: 0;
+                    display: flex;
+                }
+                .navigation-list.mobile-open.transition {
                     z-index: 999;
-                    padding: 0;
+                    padding: 48px 0 0 0;
                     width: 100vw;
                     height: 100vh;
-                    background-color: white;
-                    display: flex;
+                    background-color: $background-color-main;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
                     position: absolute;
-                    top: 48;
-                    left: 0;
-                    font-size: 2rem;
+                    top: 48px;
+                    left: 0px;
+                    margin: 0px;
+                    font-size: 1.5rem;
+                    a,
+                    h1,
+                    p {
+                        color: $text-color-main;
+                    }
                 }
                 .hamburger-menu {
                     display: flex;
+                    transition: none;
                 }
                 .hamburger-menu.hidden {
                     display: none;
+                    transition: none;
                 }
                 .hamburger-menu-exit {
                     display: flex;
