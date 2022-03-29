@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAkBA,AACI,QADI,CACJ,aAAa,CAAC;EACV,WAAW,EARR,6BAA6B,EAAE,UAAU;CAS/C",
-    "sources": [
-        "index-ge.scss"
-    ],
-    "names": [],
-    "file": "index-ge.css"
-}

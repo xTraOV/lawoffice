@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+    <link rel="stylesheet" href="./header.style.css">
     <link rel="stylesheet" href="./index.style.css">
-    <link rel="stylesheet" href="header.style.css">
 
-    <link rel="stylesheet" href="./assets/css/bpg-nino-mtavruli.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="./assets/logo/korashvili-logo.svg" type="image/x-icon">
-    <title>კორაშვილის საადვოკატო ოფისი</title>
+
+    <link rel="shortcut icon" href="/assets/logo/korashvili-logo.svg" type="image/x-icon">
+    <title class="title"></title>
 </head>
 
 <body>
@@ -25,23 +29,23 @@
             <nav class="navigation-wrapper">
                 <ul class="navigation-list">
                     <li class="navigation-list-item">
-                        <a href=""><span>სერვისები</span></a>
+                        <a href=""><span class="services">services</span></a>
                     </li>
                     <li class="navigation-list-item">
-                        <a href=""><span>სიახლეები</span></a>
+                        <a href=""><span class="news">news</span></a>
                     </li>
                     <li class="navigation-list-item">
-                        <a href=""><span>ბლოგი</span></a>
+                        <a href=""><spa class="blog">blog</spa></a>
                     </li>
                     <li class="navigation-list-item">
-                        <a href=""><span>კონტაქტი</span></a>
+                        <a href=""><span class="contact">contact</span></a>
                     </li>
                     <li class="navigation-list-item">
-                        <a href="/en/index.html"><span>eng</span></a>
+                        <button class="change_language"><span>ge</span></button>
                     </li>
                 </ul>
                 <button class="hamburger-menu">
-                    <img src="./assets/logo/mobile-menu.svg" alt="hamburger-menu" width="24px" height="24px" />
+                    <img src="../assets/logo/mobile-menu.svg" alt="hamburger-menu" width="24px" height="24px" />
                 </button>
                 <button class="hamburger-menu-exit hidden"><img src="./assets/logo/mobile-menu-exit.svg"
                         alt="exit hamburger menu" width="24px" height="24px"></button>
@@ -51,11 +55,12 @@
 
     <div class="content">
         <div class="main-image"><img src="./assets/images/frontpageimage.jpg" alt="korashvili image"></div>
+
         <article class="main-article">
-            <div class="name">
-                <h1>გიორგი კორაშვილი</h1>
+            <div class="lawier-name-wrapper">
+                <h1 class="lawier-name">GIORGI KORASHVILI</h1>
             </div>
-            <div class="article-content">
+            <div class="article-wrapper">
                 <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -64,9 +69,9 @@
             </div>
         </article>
     </div>
-    
 
     <script src="./header.script.js"></script>
+    <script src="./language.js"></script>
 </body>
 
 </html>

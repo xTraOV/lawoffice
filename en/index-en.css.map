@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAkBA,AACI,QADI,CACJ,aAAa,CAAC;EACV,WAAW,EAPP,mBAAmB,EAAE,UAAU;CAQtC",
-    "sources": [
-        "index-en.scss"
-    ],
-    "names": [],
-    "file": "index-en.css"
-}
