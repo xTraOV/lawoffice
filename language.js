@@ -1,6 +1,4 @@
-window.sessionStorage.setItem('currentLanguage', 'georgian');
-let currentLanguage = sessionStorage.getItem('currentLanguage');
-
+let currentLanguage = localStorage.getItem('currentLanguage');
 
 const languages = 
 {    
@@ -29,27 +27,46 @@ const languages =
 const button = document.querySelector(".change_language");
 const switchLanguage = () => 
 {
-    if(currentLanguage=='english'){
-        window.sessionStorage.setItem('currentLanguage','georgian');
-        currentLanguage = sessionStorage.getItem('currentLanguage');
-        for(const item of languages.georgian){
+    if(currentLanguage=='georgian'){
+        window.localStorage.setItem('currentLanguage','english');
+        currentLanguage = localStorage.getItem('currentLanguage');
+        for(const item of languages.english){
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
-            addTo.removeChild(addTo.firstChild);
+            addTo.firstChild && addTo.removeChild(addTo.firstChild);
             addTo.appendChild(toAdd);
         }
     }
     else{
-        window.sessionStorage.setItem('currentLanguage','english');
-        currentLanguage = sessionStorage.getItem('currentLanguage');
-        for(const item of languages.english){
+        window.localStorage.setItem('currentLanguage','georgian');
+        currentLanguage = localStorage.getItem('currentLanguage');
+        for(const item of languages.georgian){
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
-            addTo.removeChild(addTo.firstChild);
+            addTo.firstChild && addTo.removeChild(addTo.firstChild);
             addTo.appendChild(toAdd);
         }
     }
 }
 
+const loadLanguage = () =>
+{
+    if(currentLanguage=='english'){
+        for(const item of languages.english){
+            let toAdd = document.createTextNode(`${item.innerText}`);
+            let addTo = document.querySelector(`.${item.className}`);
+            addTo.appendChild(toAdd);
+        }
+    }
+    else
+    {
+        for(const item of languages.georgian){
+            let toAdd = document.createTextNode(`${item.innerText}`);
+            let addTo = document.querySelector(`.${item.className}`);
+            addTo.appendChild(toAdd);
+        }
+    }
+}
 
+loadLanguage();
 button.addEventListener('click', () => switchLanguage());
