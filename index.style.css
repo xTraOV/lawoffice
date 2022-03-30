@@ -1,5 +1,4 @@
 header {
-  font-family: "Noto Serif Display", serif;
   font-weight: 700;
 }
 
@@ -27,6 +26,7 @@ body {
 
 .content .main-image img {
   width: 400px;
+  height: 520px;
 }
 
 .content .main-article {

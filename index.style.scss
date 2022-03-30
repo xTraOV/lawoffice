@@ -13,7 +13,6 @@ $font-size-article-content-mobile: 1rem;
 $background-color-main: #131516;
 
 header {
-    font-family: "Noto Serif Display", serif;
     font-weight: 700;
 }
 body {
@@ -31,6 +30,7 @@ body {
     .main-image {
         img {
             width: 400px;
+            height: 520px;
         }
     }
     .main-article {
