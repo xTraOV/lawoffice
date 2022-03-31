@@ -1,5 +1,3 @@
-let currentLanguage = localStorage.getItem("currentLanguage");
-
 const languages = {
     english: [
         { className: "services", innerText: "services" },
@@ -34,9 +32,8 @@ const languages = {
 
 const button = document.querySelector(".change_language");
 const switchLanguage = () => {
-    if (currentLanguage == "georgian") {
-        window.localStorage.setItem("currentLanguage", "english");
-        currentLanguage = localStorage.getItem("currentLanguage");
+    if (sessionStorage.getItem("currentLanguage") == "georgian") {
+        window.sessionStorage.setItem("currentLanguage", "english");
         for (const item of languages.english) {
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
@@ -44,8 +41,7 @@ const switchLanguage = () => {
             addTo.appendChild(toAdd);
         }
     } else {
-        window.localStorage.setItem("currentLanguage", "georgian");
-        currentLanguage = localStorage.getItem("currentLanguage");
+        window.sessionStorage.setItem("currentLanguage", "georgian");
         for (const item of languages.georgian) {
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
@@ -56,7 +52,7 @@ const switchLanguage = () => {
 };
 
 const loadLanguage = () => {
-    if (currentLanguage == "english") {
+    if (sessionStorage.getItem("currentLanguage") == "english") {
         for (const item of languages.english) {
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
@@ -64,6 +60,7 @@ const loadLanguage = () => {
         }
     } else {
         for (const item of languages.georgian) {
+            window.sessionStorage.setItem("currentLanguage", "georgian");
             let toAdd = document.createTextNode(`${item.innerText}`);
             let addTo = document.querySelector(`.${item.className}`);
             addTo.appendChild(toAdd);
